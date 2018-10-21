@@ -16,7 +16,7 @@ DEPENDFLAGS = -M
 SRCS := $(wildcard *.cc)
 OBJS := $(patsubst %.cc,%.o,$(SRCS))
 
-TARGETS = t
+TARGETS = pof
 
 all: $(TARGETS)
 
@@ -31,7 +31,7 @@ $(DEPENDDIR):
 
 %: %.cc
 
-t: $(OBJS)
+pof: $(OBJS)
 	$(CXX) $(LDFLAGS) -o $@ $^ $(LIBS)
 
 %.o: %.cc
